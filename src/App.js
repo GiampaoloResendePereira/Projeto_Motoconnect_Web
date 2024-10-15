@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import TelaAdministrador from './components/Administrador/TelaAdministrador';
+import GerenciamentoEntrega from './components/Administrador/GerenciamentoEntregas';
+import EditarParametro from './components/Administrador/EditarParametro';
+import EditarCadastroMotoboy from './components/Administrador/EditarCadastroMotoboy';
+import Relatorios from './components/Administrador/Relatorios';
+import TelaInicio from './components/Inicio/TelaInicio';
+import SimuladorFrete from './components/Inicio/SimuladorFrete';
+import CadastroMotoboy from './components/Inicio/CadastroMotoboy';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        {/* Rotas */}
+        <Route path="/" element={<TelaInicio />} />
+        <Route path="/simulador-frete" element={<SimuladorFrete />} />
+        <Route path="/cadastrar-motoboy" element={<CadastroMotoboy />} />
+        <Route path="/administrador" element={<TelaAdministrador />} />
+        <Route path="/gerenciamento-entregas" element={<GerenciamentoEntrega />} />
+        <Route path="/editar-parametro" element={<EditarParametro />} />
+        <Route path="/editar-cadastro-motoboy" element={<EditarCadastroMotoboy />} />
+        <Route path="/relatorios" element={<Relatorios />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
