@@ -35,7 +35,7 @@ const TelaInicio = () => {
                 <a className="nav-link" href="simulador-frete">Simulador de Frete</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/administrador">Logar</a>
+                <a className="nav-link" href="/administrador">Login</a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="/cadastrar-motoboy">Cadastrar</a>
